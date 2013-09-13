@@ -1,4 +1,5 @@
 <?php
+namespace Sportradar\Phpdiff\Renderer\Text;
 /**
  * Context diff generator for PHP DiffLib.
  *
@@ -40,9 +41,9 @@
  * @link http://github.com/chrisboulton/php-diff
  */
 
-require_once dirname(__FILE__).'/../Abstract.php';
+use Sportradar\Phpdiff\Diff\Renderer\AbstractRenderer;
 
-class Diff_Renderer_Text_Context extends Diff_Renderer_Abstract
+class ContextRenderer extends AbstractRenderer
 {
 	/**
 	 * @var array Array of the different opcode tags and how they map to the context diff equivalent.

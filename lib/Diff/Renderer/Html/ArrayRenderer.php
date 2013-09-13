@@ -1,4 +1,5 @@
 <?php
+namespace Sportradar\Phpdiff\Renderer\Html;
 /**
  * Base renderer for rendering HTML based diffs for PHP DiffLib.
  *
@@ -40,9 +41,9 @@
  * @link http://github.com/chrisboulton/php-diff
  */
 
-require_once dirname(__FILE__).'/../Abstract.php';
+use Sportradar\Phpdiff\Diff\Renderer\AbstractRenderer;
 
-class Diff_Renderer_Html_Array extends Diff_Renderer_Abstract
+class ArrayRenderer extends AbstractRenderer
 {
 	/**
 	 * @var array Array of the default options that apply to this renderer.

@@ -32,8 +32,8 @@
 		<?php
 
 		// Generate a side by side diff
-		require_once dirname(__FILE__).'/../lib/Diff/Renderer/Html/SideBySide.php';
-		$renderer = new Diff_Renderer_Html_SideBySide;
+		require_once dirname(__FILE__) . '/../lib/Diff/Renderer/Html/SideBySideRenderer.php';
+		$renderer = new SideBySideRendererRenderer;
 		echo $diff->Render($renderer);
 
 		?>
@@ -41,8 +41,8 @@
 		<?php
 
 		// Generate an inline diff
-		require_once dirname(__FILE__).'/../lib/Diff/Renderer/Html/Inline.php';
-		$renderer = new Diff_Renderer_Html_Inline;
+		require_once dirname(__FILE__) . '/../lib/Diff/Renderer/Html/Inline.php';
+		$renderer = new _InlineRenderer;
 		echo $diff->render($renderer);
 
 		?>
@@ -50,7 +50,7 @@
 		<pre><?php
 
 		// Generate a unified diff
-		require_once dirname(__FILE__).'/../lib/Diff/Renderer/Text/Unified.php';
+		require_once dirname(__FILE__) . '/../lib/Diff/Renderer/Text/UnifiedRenderer.php';
 		$renderer = new Diff_Renderer_Text_Unified;
 		echo htmlspecialchars($diff->render($renderer));
 
@@ -60,7 +60,7 @@
 		<pre><?php
 
 		// Generate a context diff
-		require_once dirname(__FILE__).'/../lib/Diff/Renderer/Text/Context.php';
+		require_once dirname(__FILE__) . '/../lib/Diff/Renderer/Text/ContextRenderer.php';
 		$renderer = new Diff_Renderer_Text_Context;
 		echo htmlspecialchars($diff->render($renderer));
 		?>

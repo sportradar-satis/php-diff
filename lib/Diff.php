@@ -1,4 +1,7 @@
 <?php
+namespace Sportradar\Phpdiff;
+use Sportradar\Phpdiff\Diff\SequenceMatcher;
+
 /**
  * Diff
  *
@@ -168,8 +171,7 @@ class Diff
 			return $this->groupedCodes;
 		}
 
-		require_once dirname(__FILE__).'/Diff/SequenceMatcher.php';
-		$sequenceMatcher = new Diff_SequenceMatcher($this->a, $this->b, null, $this->options);
+		$sequenceMatcher = new SequenceMatcher($this->a, $this->b, null, $this->options);
 		$this->groupedCodes = $sequenceMatcher->getGroupedOpcodes();
 		return $this->groupedCodes;
 	}
